@@ -4,6 +4,10 @@ var sceneOneAnimation = function(){
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
         duration: 1000,
+        opacity:{
+            value:[0,1],
+            duration:100
+        },
         delay: function(el, i) { return i * 250 }
       });//animation of image stroke dashoffset
     
@@ -49,111 +53,113 @@ var sceneOneAnimation = function(){
      anime({
         targets: "#Comet-1",
         duration: 2000,
-        delay:200,
+        delay:200+2450,
         easing: 'linear',
         translateX: [1000,-1000],
         translateY: [-700,700],
-        loop:true
+        loop:5
      });//animation of comet 
      
      anime({
        targets: "#Comet-2",
        duration: 2000,
-       delay:500,
+       delay:500+2450,
        easing: 'linear',
        translateX: [1000,-1000],
        translateY: [-700,700],
-       loop:true
+       loop:5
     });//animation of comet 
     
     anime({
        targets: "#Comet-3",
        duration: 2000,
-       delay:900,
+       delay:900+2450,
        easing: 'linear',
        translateX: [1000,-1000],
        translateY: [-700,700],
-       loop:true
+       loop:5
     });//animation of comet 
     
     anime({
        targets: "#Comet-4",
        duration: 2000,
-       delay:900,
+       delay:900+2450,
        easing: 'linear',
        translateX: [1000,-1000],
        translateY: [-700,700],
-       loop:true
+       loop:5
     });//animation of comet 
     
     anime({
        targets: "#Comet-5",
        duration: 2000,
-       delay:1200,
+       delay:1200+2450,
        easing: 'linear',
        translateX: [1000,-1000],
        translateY: [-700,700],
-       loop:true
+       loop:5
     });//animation of comet 
     
     anime({
        targets: "#Comet-6",
        duration: 2000,
-       delay:1500,
+       delay:1500+2450,
        easing: 'linear',
        translateX: [1000,-1000],
        translateY: [-700,700],
-       loop:true
+       loop:5
     });//animation of comet 
     
     anime({
        targets: "#Comet-7",
        duration: 2000,
-       delay:2200,
+       delay:2200+2450,
        easing: 'linear',
        translateX: [1000,-1000],
        translateY: [-700,700],
-       loop:true
+       loop:5
     });//animation of comet 
     
     anime({
        targets: "#Comet-8",
        duration: 2000,
-       delay:2200,
+       delay:2200+2450,
        easing: 'linear',
        translateX: [1000,-1000],
        translateY: [-700,700],
-       loop:true
+       loop:5
     });//animation of comet 
     
     anime({
        targets: "#Comet-9",
        duration: 2000,
-       delay:2900,
+       delay:2900+2450,
        easing: 'linear',
        translateX: [1000,-1000],
        translateY: [-700,700],
-       loop:true
+       loop:5
     });//animation of comet 
     
     anime({
        targets: "#Comet-10",
        duration: 2000,
-       delay:3100,
+       delay:3100+2450,
        easing: 'linear',
        translateX: [1000,-1000],
        translateY: [-700,700],
-       loop:true
+       loop:5
     });//animation of comet 
-    
-    anime({
-       targets: ".NIGHT-SKY-3",
-       duration: 1000,
-       easing: 'linear',
-       opacity:[0,1],
-       direction:'alternate',
-       loop:true
-    });//animation of comet 
+    setTimeout(function(){
+        anime({
+            targets: ".NIGHT-SKY-3",
+            duration: 1000,
+            easing: 'linear',
+            opacity:[0,1],
+            direction:'alternate',
+            loop:3
+         });
+    },3000)
+   
     
     anime({
        targets:[".turbulence-3",".displacementmap-3"],
@@ -184,7 +190,7 @@ var sceneTwoAnimation = function(){
         direction: 'alternate',
         easing:'linear',
         scale:1,
-        loop:true
+        loop:2
     })
     
     anime({
@@ -383,10 +389,106 @@ var sceneOneToTwo = function(){
 var playAnimation = function(){
     sceneOneAnimation();
     setTimeout(sceneOneToTwo,10000);
-    setTimeout(sceneTwoAnimation,10000);
+    setTimeout(sceneTwoAnimation,11000);
     setTimeout(sceneTwoToThree,16000);
     setTimeout(sceneThreeAnimation,17100);
 };
 
-setTimeout(playAnimation,000);
+setTimeout(playAnimation,300);
 
+var setWillChange = function(){
+   var setWillChangeSceneOne= function(){
+    setTimeout(function(){
+        const domElement = document.querySelectorAll('.IMAGINE-TEXT-1');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+       },301);
+       setTimeout(function(){
+        document.querySelector('.night-sky-container').style.willChange='opacity';  
+       },2301);
+       setTimeout(function(){
+        document.querySelector('.night-sky-container').style.willChange='auto';  
+       },2501);
+       setTimeout(function(){
+        const domElement = document.querySelectorAll('.NIGHT-SKY-3');
+        domElement.forEach(element => {
+            element.style.willChange='opacity';
+          })
+       },2301);
+       setTimeout(function(){
+       const domElement = document.querySelectorAll('.NIGHT-SKY-3');
+       domElement.forEach(element => {
+           element.style.willChange='auto';
+         })
+      },2501);
+       setTimeout(function(){
+        document.querySelector('#Comet-1').style.willChange='transform';  
+        document.querySelector('#Comet-2').style.willChange='transform';  
+        document.querySelector('#Comet-3').style.willChange='transform';  
+        document.querySelector('#Comet-4').style.willChange='transform';  
+        document.querySelector('#Comet-5').style.willChange='transform';  
+        document.querySelector('#Comet-6').style.willChange='transform';  
+        document.querySelector('#Comet-7').style.willChange='transform';  
+        document.querySelector('#Comet-8').style.willChange='transform';  
+        document.querySelector('#Comet-9').style.willChange='transform';  
+        document.querySelector('#Comet-10').style.willChange='transform';  
+       },2250);
+       setTimeout(function(){
+        document.querySelector('#Comet-1').style.willChange='auto';  
+        document.querySelector('#Comet-2').style.willChange='auto';  
+        document.querySelector('#Comet-3').style.willChange='auto';  
+        document.querySelector('#Comet-4').style.willChange='auto';  
+        document.querySelector('#Comet-5').style.willChange='auto';  
+        document.querySelector('#Comet-6').style.willChange='auto';  
+        document.querySelector('#Comet-7').style.willChange='auto';  
+        document.querySelector('#Comet-8').style.willChange='auto';  
+        document.querySelector('#Comet-9').style.willChange='auto';  
+        document.querySelector('#Comet-10').style.willChange='auto';  
+       },2451);
+    
+       setTimeout(function(){
+        const domElement = document.querySelectorAll('.turbulence-3');
+        domElement.forEach(element => {
+            element.style.willChange='transform';
+          })
+          domElement = document.querySelectorAll('.displacementmap-3');
+        domElement.forEach(element => {
+            element.style.willChange='transform';
+          })
+       },4700);
+       setTimeout(function(){
+        const domElement = document.querySelectorAll('.turbulence-3');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.displacementmap-3');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+       },5001);
+   }
+   setWillChangeSceneOne();
+   var setWillChangeSceneOneToTwo = function(){
+        document.querySelector('.scene-2').style.willChange='opacity';  
+        document.querySelector('.scene-1').style.willChange='opacity';  
+       setTimeout(function(){
+        document.querySelector('.scene-2').style.willChange='auto';  
+        document.querySelector('.scene-1').style.willChange='auto';  
+       },501);
+   }
+   setTimeout(setWillChangeSceneOneToTwo,9500);
+   var setWillChangeSceneTwo = function(){
+    ["#believe",".turbulence-1",".displacementmap-1"],
+    
+    setTimeout(function(){
+        document.querySelector("#believe").style.willChange='transform';
+        const domElement = document.querySelectorAll('.turbulence-1');
+        domElement.forEach(element => {
+            element.style.willChange='transform';
+          })
+       },301);
+   }
+   setTimeout(setWillChangeSceneTwo,9500);
+}
+setWillChange();
