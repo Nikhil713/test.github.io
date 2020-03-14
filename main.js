@@ -314,7 +314,7 @@ var sceneTwoAnimation = function(){
 var sceneThreeAnimation = function(){
     anime({
             targets:'.achieve-container',
-            duration:2000,
+            duration:600,
             easing:'easeInOutQuad',
             opacity:1
     });
@@ -339,13 +339,13 @@ var sceneThreeAnimation = function(){
         rotate:{
             value: ['13.5deg','0deg'],
             duration: 10000,
-            delay: 2220,
+            delay: 3020,
             easing: 'easeInOutQuart'
           },
         scale:{
             value: [1.4,1],
             duration: 10000,
-            delay: 2200,
+            delay: 3000,
             easing: 'easeInOutQuart'
           },
     }); 
@@ -468,7 +468,6 @@ var setWillChange = function(){
           })
        },5001);
    }
-   setWillChangeSceneOne();
    var setWillChangeSceneOneToTwo = function(){
         document.querySelector('.scene-2').style.willChange='opacity';  
         document.querySelector('.scene-1').style.willChange='opacity';  
@@ -477,7 +476,6 @@ var setWillChange = function(){
         document.querySelector('.scene-1').style.willChange='auto';  
        },400);
    }
-   setTimeout(setWillChangeSceneOneToTwo,9500);
    var setWillChangeSceneTwo = function(){    
     document.querySelector("#believe").style.willChange='transform';
         const domElement = document.querySelectorAll('.turbulence-1');
@@ -516,8 +514,141 @@ var setWillChange = function(){
           domElement.forEach(element => {
               element.style.willChange='auto';
             })      
-       },215);
+       },200);
    }
-   setTimeout(setWillChangeSceneTwo,9550);
+   var setWillChangeSceneTwoToThree = function(){
+    document.querySelector('.scene-2').style.willChange='top,bottom';  
+    document.querySelector('.scene-3').style.willChange='top';  
+   setTimeout(function(){
+    document.querySelector('.scene-2').style.willChange='auto';  
+    document.querySelector('.scene-3').style.willChange='auto';  
+   },501);
+   }
+   var setWillChangeSceneThree = function(){
+    const domElement = document.querySelectorAll('.NEON-ROAD-STROKE-1');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-2');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-3');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-4');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-5');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-6');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-7');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-8');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-9');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-10');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-11');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-12');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      domElement = document.querySelectorAll('.NEON-ROAD-STROKE-13');
+    domElement.forEach(element => {
+        element.style.willChange='transform';
+      })
+      setTimeout(function(){
+        const domElement = document.querySelectorAll('.NEON-ROAD-STROKE-1');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-2');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-3');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-4');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-5');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-6');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-7');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-8');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-9');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-10');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-11');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-12');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.NEON-ROAD-STROKE-13');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+      },601);
+      setTimeout(function(){
+        document.querySelector('.svg-container-fill').style.willChange='opacity';
+      },2500);
+      setTimeout(function(){
+        document.querySelector('.svg-container-fill').style.willChange='auto';
+      },2805);
+      setTimeout(function(){
+        document.querySelector('#neon-road-fill').style.willChange='transform';
+      },2600);
+      setTimeout(function(){
+        document.querySelector('#neon-road-fill').style.willChange='auto';
+      },2900);
+
+   }
+   setWillChangeSceneOne();
+   setTimeout(setWillChangeSceneOneToTwo,9500);
+   setTimeout(setWillChangeSceneTwo,9850);
+   setTimeout(setWillChangeSceneTwoToThree,15500);
+   setTimeout(setWillChangeSceneThree,16500);
 }
 setWillChange();
