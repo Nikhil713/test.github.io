@@ -389,7 +389,7 @@ var sceneOneToTwo = function(){
 var playAnimation = function(){
     sceneOneAnimation();
     setTimeout(sceneOneToTwo,10000);
-    setTimeout(sceneTwoAnimation,11000);
+    setTimeout(sceneTwoAnimation,10009);
     setTimeout(sceneTwoToThree,16000);
     setTimeout(sceneThreeAnimation,17100);
 };
@@ -475,20 +475,49 @@ var setWillChange = function(){
        setTimeout(function(){
         document.querySelector('.scene-2').style.willChange='auto';  
         document.querySelector('.scene-1').style.willChange='auto';  
-       },501);
+       },400);
    }
    setTimeout(setWillChangeSceneOneToTwo,9500);
-   var setWillChangeSceneTwo = function(){
-    ["#believe",".turbulence-1",".displacementmap-1"],
-    
-    setTimeout(function(){
-        document.querySelector("#believe").style.willChange='transform';
+   var setWillChangeSceneTwo = function(){    
+    document.querySelector("#believe").style.willChange='transform';
         const domElement = document.querySelectorAll('.turbulence-1');
         domElement.forEach(element => {
             element.style.willChange='transform';
           })
-       },301);
+          domElement = document.querySelectorAll('.displacementmap-1');
+        domElement.forEach(element => {
+            element.style.willChange='transform';
+          })
+          document.querySelector("#underwater").style.willChange='transform';
+         domElement = document.querySelectorAll('.turbulence-2');
+          domElement.forEach(element => {
+              element.style.willChange='transform';
+            })
+            domElement = document.querySelectorAll('.displacementmap-2');
+          domElement.forEach(element => {
+              element.style.willChange='transform';
+            })      
+    setTimeout(function(){
+        document.querySelector("#believe").style.willChange='auto';
+        const domElement = document.querySelectorAll('.turbulence-1');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          domElement = document.querySelectorAll('.displacementmap-1');
+        domElement.forEach(element => {
+            element.style.willChange='auto';
+          })
+          document.querySelector("#underwater").style.willChange='auto';
+          domElement = document.querySelectorAll('.turbulence-2');
+          domElement.forEach(element => {
+              element.style.willChange='auto';
+            })
+            domElement = document.querySelectorAll('.displacementmap-2');
+          domElement.forEach(element => {
+              element.style.willChange='auto';
+            })      
+       },215);
    }
-   setTimeout(setWillChangeSceneTwo,9500);
+   setTimeout(setWillChangeSceneTwo,9550);
 }
 setWillChange();
